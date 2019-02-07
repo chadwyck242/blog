@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 class PostList extends React.Component {
-    render() {
-        return <div>PostList</div>;
-    }
-};
+  render() {
+    return <div>PostList</div>;
+  }
+}
 
 export default PostList;
