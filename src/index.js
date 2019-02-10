@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
+// a function imported from react-redux which makes the
+// store available to all components nested within
 import { Provider } from "react-redux";
 // importing these functions from the Redux package
 import { createStore, applyMiddleware } from "redux";
