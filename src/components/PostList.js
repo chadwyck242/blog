@@ -13,7 +13,7 @@ class PostList extends React.Component {
 }
 
 // mapStateToProps called with state object from Redux store
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return { posts: state.posts };
 };
 

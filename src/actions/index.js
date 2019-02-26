@@ -10,5 +10,6 @@ export const fetchPosts = () => async dispatch => {
   // returns something similar to a promise. using async /await syntax
   const response = await jsonPlaceholder.get("/posts");
 
-  dispatch({ type: "FETCH_POSTS", payload: response });
+  // for the API payload response, we only want the data property
+  dispatch({ type: "FETCH_POSTS", payload: response.data });
 };
