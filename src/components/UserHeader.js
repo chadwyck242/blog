@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react";
+import { connect } from "react-redux";
+import { fetchUser } from "../actions";
 
-// UserHeader class based component, diplayed in PostList component
+// UserHeader class based component, displayed in PostList component
 // Display the user information in a blog post
 class UserHeader extends React.Component {
-    render() {
-        return <div>User Header</div>
-    }
-};
+  render() {
+    return <div>User Header</div>;
+  }
+}
 
-export default UserHeader;
+export default connect(null, { fetchUser })(UserHeader);
