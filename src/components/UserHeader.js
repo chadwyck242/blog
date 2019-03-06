@@ -13,23 +13,23 @@ class UserHeader extends React.Component {
   }
 
   render() {
-    // the JavaScript built-in find function used here
-    // can accept functions as well, return item is found (T / F)
-    const user = this.props.users.find(user => user.id === this.props.userId);
+    // the appropriate user is found below in the mapStateToProps function
+    const { user } = this.props;
 
     if (!user) {
       return null;
     }
 
-    return <div>User Header</div>;
+    return <div className="header">{user.name}</div>;
   }
 }
 
-const mapStateToProps = state => {
-  return { users: state.users };
+const mapStateToProps = (state, ownProps) => {
+  // find the appropriate user in here instead of inside the component
+  return { user: state.users.find(user => user.id === ownProps.userId) };
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   { fetchUser }
 )(UserHeader);
